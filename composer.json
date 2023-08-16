@@ -2,6 +2,7 @@
   "name": "basaltinc/twig-tools",
   "type": "library",
   "license": "MIT",
+  "version": "1.4.4",
   "authors": [
     {
       "name": "Evan Lovely",
