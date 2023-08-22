@@ -5,6 +5,7 @@ namespace BasaltInc\TwigTools;
 use Webmozart\PathUtil\Path;
 use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
+use Twig\Loader\FilesystemLoader;
 
 class Namespaces {
 
@@ -64,7 +65,7 @@ class Namespaces {
    * @return \Twig_Loader_Filesystem
    */
   public static function addPathsToLoader($config) {
-    $loader = new \Twig_Loader_Filesystem();
+    $loader = new FilesystemLoader();
     foreach ($config as $key => $value) {
       foreach ($value['paths'] as $path) {
         $loader->addPath($path, $key);

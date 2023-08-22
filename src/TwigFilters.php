@@ -2,7 +2,7 @@
 
 namespace BasaltInc\TwigTools;
 
-use \Twig_SimpleFilter;
+use Twig\TwigFilter;
 
 class TwigFilters {
 
@@ -11,7 +11,7 @@ class TwigFilters {
    * @return \Twig_SimpleFilter
    */
   public static function remove_null($name = 'remove_null') {
-    return new Twig_SimpleFilter($name, function ($array) {
+    return new TwigFilter($name, function ($array) {
       if (!is_array($array)) {
         return $array;
       }
